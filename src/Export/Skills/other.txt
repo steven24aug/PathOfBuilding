@@ -349,6 +349,16 @@ local skills, mod, flag, skill = ...
 #flags spell
 #mods
 
+#skill SupportAuraDuration
+	fromItem = true,
+	statMap = {
+		["support_aura_duration_base_buff_duration"] = {
+			skill("auraDuration", nil),
+			div = 1000,
+		},
+	},
+#mods
+
 #noGem
 #skill TouchOfGod
 #flags attack area melee
@@ -516,8 +526,8 @@ local skills, mod, flag, skill = ...
 		["skill_empowers_next_x_melee_attacks"] = {
 			mod("IntimidatingExertedAttacks", "BASE", nil),
 		},
-		["intimidating_cry_enemy_phys_reduction_%_penalty_vs_hit_per_5_MP"] = {
-			mod("IntimidatingPDRPer5MP", "BASE", nil),
+		["intimidating_cry_movement_speed_per_5_MP"] = {
+			mod("IntimidatingMovementSpeedPer5MP", "BASE", nil),
 		},
 	},
 #baseMod skill("radius", 60)
